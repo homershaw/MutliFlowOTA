@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "product": "MultiFlow",
+  "channel": "development",
+  "version": "2X.2H.4-OTA1",
+  "firmware_url": "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/firmware.bin",
+  "sha256": "",
+  "size": 0,
+  "notes": "Initial public OTA development channel. Firmware binary not yet published."
+}
