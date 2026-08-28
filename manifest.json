@@ -2,9 +2,9 @@
     "schema":  1,
     "product":  "MultiFlow",
     "channel":  "development",
-    "version":  "2X.2H.4-OTA2",
+    "version":  "2X.2H.4-OTA4",
     "firmware_url":  "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/firmware.bin",
-    "sha256":  "2c7fdd3aee9359a90b2c5412158f078bb90099062ffff48f89bbcdcfe311aba4",
-    "size":  1799168,
-    "notes":  "Development OTA build published 2026-08-28 12:24:21"
+    "sha256":  "c0ea6916f778c9099d1bb6e9fe275d92a852276da19471fb54ff0a79737c1ee4",
+    "size":  1802832,
+    "notes":  "Development OTA build published 2026-08-28 12:42:13"
 }
