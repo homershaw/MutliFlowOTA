@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "product": "Riot-Flow",
+  "platform": "TRMNL_XIAO_EPAPER",
+  "channel": "stable",
+  "version": "2.0.0-a6c1",
+  "firmware_url": "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/riot-flow/firmware.bin",
+  "sha256": "e0d24bce330da6355ac350a0c235bae5601add75283821d8c65d5a6d09126c8b",
+  "size": 1773744,
+  "notes": "Riot-Flow A6c1 remote manifest-check validation build, 2026-09-13"
+}
