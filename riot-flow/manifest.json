@@ -3,9 +3,9 @@
   "product": "Riot-Flow",
   "platform": "TRMNL_XIAO_EPAPER",
   "channel": "stable",
-  "version": "2.0.0-a6c2",
+  "version": "2.0.0-a7b2",
   "firmware_url": "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/riot-flow/firmware.bin",
-  "sha256": "29c4337f122e85bdc1b07260a71f9c08eb8595746fbc1d096c05d74d465fee58",
-  "size": 1782512,
-  "notes": "Riot-Flow A6c2 verified remote OTA install validation build with heap-buffer runtime repair, 2026-09-13"
+  "sha256": "bb0437f6f48809c636b36cf9a577b7e6f6587432e0bbe305d21346c5c356419e",
+  "size": 1811152,
+  "notes": "Riot-Flow A7b2 browser-mediated verified OTA release with M31 transport shown on the ePaper footer and improved SUPPLY/version spacing, 2026-09-14"
 }
