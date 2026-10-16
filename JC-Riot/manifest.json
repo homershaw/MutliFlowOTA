@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "product": "Riot-Flow",
+  "platform": "JC-ESP32P4-M3-DEV",
+  "channel": "development",
+  "version": "20261016T013916Z",
+  "build": "20261016T013916Z ec155cdd+dirty",
+  "firmware_url": "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/JC-Riot/firmware.bin",
+  "sha256": "d57ba0b42107aaefb4dcc425a7990e4e7b1ea8b2a76474f6c61b1486d3cd81e9",
+  "size": 2872352,
+  "artifact_type": "application",
+  "build_environment": "riotflow_jc_p4",
+  "source_repository": "https://github.com/homershaw/Riot",
+  "source_branch": "JC-Riot",
+  "source_commit": "0a3338355ac0c1ff5a41bd69940b2f151fe4d054",
+  "tested_chip": "ESP32-P4",
+  "tested_chip_revision": "1.3",
+  "tested_flash_bytes": 16777216,
+  "validation": "Application-only serial install, restart, preserved configuration, 12 GOOD M31 points and SMTP 250 with operator-confirmed receipt.",
+  "ota_validated": false,
+  "notes": "JC only. Canonical M31 Tags, compact UI and PSRAM Email task stacks. Preserve the installed compatible bootloader and saved configuration. Firmware checker/browser installer is not included. SD was already unmounted before this repair and remains unresolved."
+}

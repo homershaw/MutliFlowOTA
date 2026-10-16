@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "product": "Riot-Flow",
+  "platform": "ESP32-P4-NANO",
+  "channel": "development",
+  "version": "20261016T002740Z",
+  "build": "20261016T002740Z 9da82910+dirty",
+  "firmware_url": "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/P4-NANO/firmware.bin",
+  "sha256": "3b50e166668e26c725da6a564ec193393f1a3c40d1ed02eef69b068c43a5cceb",
+  "size": 2852592,
+  "artifact_type": "application",
+  "build_environment": "riotflow_p4_nano_p3b2",
+  "source_repository": "https://github.com/homershaw/Riot",
+  "source_branch": "feature/p4-nano-generic-platform",
+  "source_commit": "af18ef2259c8285abbdf6fdee30934cf6aa40ed8",
+  "tested_chip": "ESP32-P4",
+  "tested_chip_revision": "3.1",
+  "tested_flash_bytes": 16777216,
+  "validation": "Application-only serial install, restart, preserved configuration/SD, 12 GOOD M31 points and SMTP 250 with operator-confirmed receipt.",
+  "ota_validated": false,
+  "notes": "P4 Nano only. JC application-feature parity with Nano hardware mapping and PSRAM Email task stacks. Preserve the installed compatible bootloader and saved configuration. Firmware checker/browser installer is not included."
+}
