@@ -1,0 +1,102 @@
+Research the eletechsup R44VL04 Modbus I/O board and create a RIOT-compatible TOML Device Library profile.
+Use authoritative manufacturer documentation first. Prefer R44VL04 manuals, Modbus register maps, communications manuals, or other official technical documents.
+Do not guess or invent:
+- register numbers
+- function codes
+- address basis
+- data types
+- packing / byte order
+- scaling
+- engineering units
+- access type
+- tag meanings
+If a required detail cannot be verified from authoritative documentation, omit it or mark it clearly as unverified.
+RIOT Device Profile structure:
+schema_version = 1
+
+[device]
+profile_id = "modbus_R44VL04"
+profile_version = 1
+vendor = "Eletechsup"
+model = "R44VL04"
+description = "Modbus RV44VL04 Modbus I/O Board"
+
+[modbus]
+# Include only fields verified from documentation.
+# Examples:
+# transport = "rtu"
+# default_baud = 9600
+# default_port = 502
+# unit_id = 1
+# address_basis = "zero_based"
+# packing = "DCBA"
+# short_packing = "BA"
+# long_packing = "HGFEDCBA"
+Define supported points with repeated [[tags]] tables.
+RIOT currently supports:
+- function = 1, 2, 3, or 4 when verified
+- function may be omitted if not documented
+- data_type = "bool", "uint16", "int16", or "float32"
+- access = "read" only
+- default_enabled = true or false
+- for legacy profiles, tag-level word_order = "HIGH_LOW" or "LOW_HIGH"
+- for newer external profiles, prefer device-level [modbus] packing when the packing is known
+Each tag should use:
+[[tags]]
+id = "stable_lowercase_id"
+name = "Field Friendly Name"
+description = "Plain-language description"
+
+# Include only if verified:
+function = 3
+
+register = 0
+
+data_type = "uint16"
+access = "read"
+default_enabled = false
+poll_group = "status"
+For 32-bit values where the manufacturer documents alternate register maps:
+register_32 = 0
+register_16 = 0
+data_type = "float32"
+Rules:
+- Preserve manufacturer register numbers exactly as documented.
+- Do not silently subtract 1 or convert between base-zero and base-one addressing.
+- If address basis is not explicitly documented, omit address_basis.
+- If function code is not explicitly documented, omit function.
+- If packing/byte order is not explicitly documented, omit it and identify it as a field-validation item.
+- Do not include unsupported RIOT types such as uint32, int32, float64, string, or bitfield.
+- If an important register uses an unsupported type, list it separately under Unsupported / future RIOT tags.
+- Use stable lowercase tag IDs with underscores.
+- Use plain-language names suitable for field technicians.
+- Use default_enabled = true only for a modest set of broadly useful points.
+- Do not fabricate missing values just to make the file complete.
+Prioritize useful PF2100 points such as, where documented:
+- burner state / mode
+- flame status
+- process temperature
+- setpoint
+- alarm status / alarm code
+- permissives
+- valve states
+- ignition state
+- shutdown state
+- runtime
+- input / output status
+- diagnostic status
+Before producing the TOML, provide a short source-validation summary showing:
+1. manufacturer documents used;
+2. supported Modbus transport;
+3. documented baud/port/default settings;
+4. address basis;
+5. function codes;
+6. data types;
+7. packing / byte order;
+8. any firmware or model variation affecting the register map.
+Then output one complete:
+profire_pf2100.toml
+After the TOML, provide a verification table listing every generated tag with its manufacturer source/register reference.
+If any required detail cannot be verified, mark it UNVERIFIED and omit that field/tag from the uploadable TOML.
+For your PF2100 specifically, because you already have it wired and polling, I’d add one extra paragraph at the bottom:
+I have a real PF2100 available for field validation. After generating the profile, also provide a short test plan with 3–5 safe read-only registers to verify first against live values before enabling the full tag set.
