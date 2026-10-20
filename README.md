@@ -15,6 +15,7 @@ both use ESP32-P4 but have different hardware mappings and build targets.
 |---|---|---|
 | [JC-Riot](JC-Riot/) | `JC-ESP32P4-M3-DEV` | Tested application image; JC OTA integration pending |
 | [P4-NANO](P4-NANO/) | `ESP32-P4-NANO` | Tested application image; Nano OTA integration pending |
+| [P4-LCD](P4-LCD/) | `Waveshare-P4-LCD-7B` | Development application image for the Waveshare 7-inch touch LCD; on-controller Firmware Update page |
 | [P4-TRMNL](P4-TRMNL/) | `TRMNL_XIAO_EPAPER` | Existing RIOT-Flow TRMNL release, moved without changing its binary |
 
 `P4-TRMNL` is the operator-selected name for the existing RIOT-Flow TRMNL

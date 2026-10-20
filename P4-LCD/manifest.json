@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "product": "Riot-Flow",
+  "platform": "Waveshare-P4-LCD-7B",
+  "channel": "development",
+  "version": "20261020T212523Z",
+  "build": "20261020T212523Z de149793+dirty",
+  "firmware_url": "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/P4-LCD/firmware.bin",
+  "sha256": "2d5169157b4df928790b7cf47f997208795fc8a1fe7c1fa67918020a45b26b42",
+  "size": 4638560,
+  "artifact_type": "application",
+  "build_environment": "riotflow_p4_lcd",
+  "source_repository": "https://github.com/homershaw/Riot",
+  "source_branch": "P4-LCD",
+  "source_commit": "de149793f1afe421657078fac9a478b0b063ab88",
+  "tested_chip": "ESP32-P4",
+  "tested_chip_revision": "1.3",
+  "tested_flash_bytes": 33554432,
+  "validation": "Built from uncommitted changes on top of de14979. The same working tree (one QR hint wording change earlier) ran over USB on two Waveshare ESP32-P4-WIFI6-Touch-LCD-7B boards (chip rev 1.3, 32 MB): site Wi-Fi, M31 polling, native Dashboard, Setup hub and Firmware Update page verified. This exact image was not separately installed before publishing.",
+  "ota_validated": false,
+  "notes": "P4-LCD only (Waveshare ESP32-P4-WIFI6-Touch-LCD-7B). Native touchscreen Dashboard with site logo, status pills, sparklines and Devices summary; Setup hub with live capability status and Firmware Update tile; one-shot ESP32-C6 hosted update to 2.12.13. Application-only image: preserves the installed bootloader and saved configuration. Boards still on another vendor or factory partition layout need a one-time USB install with the RIOT OTA partition table."
+}
