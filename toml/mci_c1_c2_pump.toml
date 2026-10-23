@@ -1,0 +1,340 @@
+schema_version = 2
+
+[device]
+profile_id = "mci_c1_c2_pump"
+profile_version = 1
+vendor = "MCI Solutions"
+model = "C1/C2 V2 Modbus RTU"
+description = "MCI C1 simplex and C2 duplex chemical injection pump controller; verify controller revision and options"
+
+[modbus]
+transport = "rtu"
+unit_id = 1
+address_format = "zero_based"
+
+[[tags]]
+id = "pump_on_status"
+name = "Pump On/Off Status"
+description = "1 = pump ON; 0 = pump OFF"
+read_function = 2
+register = 0
+data_type = "bool"
+access = "read"
+default_enabled = false
+poll_group = "status"
+pool_group = "Status"
+
+[[tags]]
+id = "low_voltage_dropout"
+name = "Low Voltage Dropout"
+description = "1 = low-voltage dropout active; 0 = OK"
+read_function = 2
+register = 1
+data_type = "bool"
+access = "read"
+default_enabled = false
+poll_group = "status"
+pool_group = "Status"
+
+[[tags]]
+id = "temperature_dropout"
+name = "Temperature Dropout"
+description = "1 = temperature OFF setpoint reached; 0 = not active"
+read_function = 2
+register = 2
+data_type = "bool"
+access = "read"
+default_enabled = false
+poll_group = "status"
+pool_group = "Status"
+
+[[tags]]
+id = "standby_status"
+name = "Standby Status"
+description = "1 = pump in standby; 0 = pump active/cycling"
+read_function = 2
+register = 3
+data_type = "bool"
+access = "read"
+default_enabled = false
+poll_group = "status"
+pool_group = "Status"
+
+[[tags]]
+id = "cold_start_status"
+name = "Cold Start Routine Status"
+description = "1 = cold-start routine ON; 0 = OFF"
+read_function = 2
+register = 4
+data_type = "bool"
+access = "read"
+default_enabled = false
+poll_group = "status"
+pool_group = "Status"
+
+[[tags]]
+id = "pump_on_off_control"
+name = "Pump ON/OFF Control"
+description = "Write coil state: 1 = pump ON; 0 = pump OFF. Actuation can start/stop chemical injection."
+write_function = 5
+register = 0
+data_type = "bool"
+access = "write"
+default_enabled = false
+pool_group = "Control"
+
+[[tags]]
+id = "system_dc_voltage"
+name = "System DC Voltage"
+description = "Raw value in volts/100; scale converts to volts"
+read_function = 4
+register = 0
+data_type = "uint16"
+scale = 0.01
+units = "V"
+access = "read"
+default_enabled = false
+poll_group = "measurements"
+pool_group = "Measurements"
+
+[[tags]]
+id = "temperature_sensor"
+name = "Temperature Sensor Reading"
+description = "Ambient temperature sensor reading"
+read_function = 4
+register = 1
+data_type = "int16"
+units = "degC"
+access = "read"
+default_enabled = false
+poll_group = "measurements"
+pool_group = "Measurements"
+
+[[tags]]
+id = "injection_rate_actual"
+name = "Injection Rate"
+description = "Raw value in litres per day divided by 10"
+read_function = 4
+register = 2
+data_type = "uint16"
+scale = 0.1
+units = "L/day"
+access = "read"
+default_enabled = false
+poll_group = "measurements"
+pool_group = "Measurements"
+
+[[tags]]
+id = "injection_rate_max"
+name = "Maximum Injection Rate"
+description = "Maximum available injection rate; raw value in L/day divided by 10"
+read_function = 4
+register = 3
+data_type = "uint16"
+scale = 0.1
+units = "L/day"
+access = "read"
+default_enabled = false
+poll_group = "measurements"
+pool_group = "Measurements"
+
+[[tags]]
+id = "injection_rate_min"
+name = "Minimum Injection Rate"
+description = "Minimum available injection rate; raw value in L/day divided by 10"
+read_function = 4
+register = 4
+data_type = "uint16"
+scale = 0.1
+units = "L/day"
+access = "read"
+default_enabled = false
+poll_group = "measurements"
+pool_group = "Measurements"
+
+[[tags]]
+id = "pump_model"
+name = "Pump Model"
+description = "0 = simplex C1; 1 = duplex C2"
+read_function = 3
+register = 2
+data_type = "uint16"
+access = "read"
+default_enabled = false
+poll_group = "configuration"
+pool_group = "Configuration"
+
+[[tags]]
+id = "supply_voltage_model"
+name = "Supply Voltage Model"
+description = "0 = 12 V; 1 = 24 V"
+read_function = 3
+register = 4
+data_type = "uint16"
+access = "read"
+default_enabled = false
+poll_group = "configuration"
+pool_group = "Configuration"
+
+[[tags]]
+id = "low_voltage_disconnect_enabled"
+name = "Low Voltage Disconnect Enabled"
+description = "1 = ON; 0 = OFF"
+read_function = 3
+register = 6
+data_type = "uint16"
+access = "read"
+default_enabled = false
+poll_group = "configuration"
+pool_group = "Configuration"
+
+[[tags]]
+id = "injection_cycle_mode"
+name = "Injection Cycle Mode"
+description = "1 = Dwell; 0 = Variable/continuous"
+read_function = 3
+write_function = 6
+register = 29
+data_type = "uint16"
+access = "read_write"
+default_enabled = false
+poll_group = "configuration"
+pool_group = "Configuration"
+
+[[tags]]
+id = "temperature_control_enabled"
+name = "Temperature-Based ON/OFF Control"
+description = "1 = ON; 0 = OFF. Temperature setpoints apply only when enabled."
+read_function = 3
+write_function = 6
+register = 30
+data_type = "uint16"
+access = "read_write"
+default_enabled = false
+poll_group = "configuration"
+pool_group = "Configuration"
+
+[[tags]]
+id = "auto_start_enabled"
+name = "Auto Start After Power Interrupt"
+description = "1 = ON; 0 = OFF"
+read_function = 3
+write_function = 6
+register = 31
+data_type = "bool"
+access = "read_write"
+default_enabled = false
+poll_group = "configuration"
+pool_group = "Configuration"
+
+[[tags]]
+id = "maximum_injection_rate_lockout"
+name = "Maximum Injection Rate Lockout"
+description = "Raw value in L/day divided by 10; 0 disables the lockout"
+read_function = 3
+write_function = 6
+register = 32
+data_type = "uint16"
+scale = 0.1
+units = "L/day"
+access = "read_write"
+default_enabled = false
+poll_group = "configuration"
+pool_group = "Configuration"
+
+[[tags]]
+id = "primary_plunger_size"
+name = "Primary Plunger Size"
+description = "0 = 1/4 in; 1 = 3/8 in; 2 = 1/2 in; 3 = 11/16 in"
+read_function = 3
+register = 33
+data_type = "uint16"
+access = "read"
+default_enabled = false
+poll_group = "configuration"
+pool_group = "Configuration"
+
+[[tags]]
+id = "injection_rate_setpoint"
+name = "Pump Injection Rate Setpoint"
+description = "Raw value in L/day divided by 10; check min/max rate before writing"
+read_function = 3
+write_function = 6
+register = 34
+data_type = "uint16"
+scale = 0.1
+units = "L/day"
+access = "read_write"
+default_enabled = false
+poll_group = "setpoints"
+pool_group = "Setpoints"
+
+[[tags]]
+id = "low_voltage_reconnect"
+name = "Low Voltage Reconnect Setpoint"
+description = "Raw value in volts divided by 10; reconnect must be at least 0.1 V above disconnect"
+read_function = 3
+write_function = 6
+register = 35
+data_type = "uint16"
+scale = 0.1
+units = "V"
+access = "read_write"
+default_enabled = false
+poll_group = "setpoints"
+pool_group = "Setpoints"
+
+[[tags]]
+id = "low_voltage_disconnect"
+name = "Low Voltage Disconnect Setpoint"
+description = "Raw value in volts divided by 10; valid range depends on 12 V or 24 V model"
+read_function = 3
+write_function = 6
+register = 36
+data_type = "uint16"
+scale = 0.1
+units = "V"
+access = "read_write"
+default_enabled = false
+poll_group = "setpoints"
+pool_group = "Setpoints"
+
+[[tags]]
+id = "temperature_off_setpoint"
+name = "Temperature OFF Setpoint"
+description = "Ambient temperature at which pump cycles OFF; requires temperature control enabled"
+read_function = 3
+write_function = 6
+register = 37
+data_type = "int16"
+units = "degC"
+access = "read_write"
+default_enabled = false
+poll_group = "setpoints"
+pool_group = "Setpoints"
+
+[[tags]]
+id = "temperature_on_setpoint"
+name = "Temperature ON Setpoint"
+description = "Ambient temperature at which pump cycles ON; requires temperature control enabled"
+read_function = 3
+write_function = 6
+register = 38
+data_type = "int16"
+units = "degC"
+access = "read_write"
+default_enabled = false
+poll_group = "setpoints"
+pool_group = "Setpoints"
+
+[[tags]]
+id = "maximum_pressure_customization"
+name = "Maximum Pressure Configuration Code"
+description = "Read-only encoded pressure setting; decode using the manual's table for the configured plunger size"
+read_function = 3
+register = 40
+data_type = "uint16"
+access = "read"
+default_enabled = false
+poll_group = "configuration"
+pool_group = "Configuration"
