@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "product": "Riot-Flow",
+  "platform": "JC-ESP32P4-OPT",
+  "channel": "development",
+  "version": "20261026T143724Z",
+  "build": "20261026T143724Z bdec5c2a+clean",
+  "firmware_url": "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/JC-OPT/firmware.bin",
+  "sha256": "059913f64ba3770c8324c2dfaee7d92a8805df55d9d141031475f152b5e8f57e",
+  "size": 3096912,
+  "artifact_type": "application",
+  "build_environment": "riotflow_jc_opt",
+  "source_repository": "https://github.com/homershaw/Riot",
+  "source_branch": "feature/tag-measure",
+  "source_commit": "bdec5c2a62ae2685ee3848f4f40efd9c2970d0cb",
+  "tested_chip": "ESP32-P4",
+  "tested_chip_revision": "1.3",
+  "tested_flash_bytes": 16777216,
+  "validation": "Same source (bdec5c2) installed application-only over USB on the JC-P4 bench board (chip rev 1.3, build stamped +dirty before commit) with saved configuration retained: booted, email settings loaded, save/restart/reject checks passed, Email page served. This clean rebuild was not separately installed.",
+  "ota_validated": false,
+  "notes": "JC-OPT only (JC hardware plus Tubing Optimizer v5). Tag table, Tag Manual, PID loops, Dashboard trends, system contract hour, static tap choice, Optimizer data over MQTT (off by default), customer-chosen email message content. Application-only image; preserves the installed bootloader and saved configuration. Install confirmation: INSTALL JC-OPT."
+}
