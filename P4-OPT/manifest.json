@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "product": "Riot-Flow",
+  "platform": "ESP32-P4-OPT",
+  "channel": "development",
+  "version": "20261026T144351Z",
+  "build": "20261026T144351Z bdec5c2a+clean",
+  "firmware_url": "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/P4-OPT/firmware.bin",
+  "sha256": "4814aeffdc462415fb0b27f2ea2d176925dc610d7fc5000660189027bd66178d",
+  "size": 3099936,
+  "artifact_type": "application",
+  "build_environment": "riotflow_p4_opt",
+  "source_repository": "https://github.com/homershaw/Riot",
+  "source_branch": "feature/tag-measure",
+  "source_commit": "bdec5c2a62ae2685ee3848f4f40efd9c2970d0cb",
+  "tested_chip": "ESP32-P4",
+  "tested_chip_revision": "3.1",
+  "tested_flash_bytes": 16777216,
+  "validation": "Built from the same commit as JC-OPT 20261026T143724Z, which was checked on the JC-P4 bench board. Not yet installed on a P4-NANO.",
+  "ota_validated": false,
+  "notes": "P4-NANO with Tubing Optimizer v5 (P4-OPT). P4 trunk feature line: Tag table, Tag Manual, PID loops, Dashboard trends, system contract hour, static tap choice, Optimizer data over MQTT (off by default), customer-chosen email message content. Units on the older P4-OPT line: save a backup first. Application-only image; preserves the installed bootloader and saved configuration. Install confirmation: INSTALL P4-OPT."
+}
