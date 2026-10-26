@@ -16,7 +16,7 @@
   "tested_chip": "ESP32-P4",
   "tested_chip_revision": "3.1",
   "tested_flash_bytes": 16777216,
-  "validation": "Built from the same commit as JC-OPT 20261026T143724Z, which was checked on the JC-P4 bench board. Not yet installed on a P4-NANO.",
-  "ota_validated": false,
+  "validation": "Installed through the on-controller web updater on a P4-NANO (chip rev 3.1, COM7) over the older P4-OPT line (84102cf); booted with saved configuration retained, then converted to the Tag table (dry run clean: 5 process Tags, 5 Optimizer inputs, 25 Dashboard items, nothing unresolved). DMA-capable RAM free 65 KB, internal 104 KB after boot.",
+  "ota_validated": true,
   "notes": "P4-NANO with Tubing Optimizer v5 (P4-OPT). P4 trunk feature line: Tag table, Tag Manual, PID loops, Dashboard trends, system contract hour, static tap choice, Optimizer data over MQTT (off by default), customer-chosen email message content. Units on the older P4-OPT line: save a backup first. Application-only image; preserves the installed bootloader and saved configuration. Install confirmation: INSTALL P4-OPT."
 }
