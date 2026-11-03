@@ -15,6 +15,9 @@ both use ESP32-P4 but have different hardware mappings and build targets.
 |---|---|---|
 | [JC-Riot](JC-Riot/) | `JC-ESP32P4-M3-DEV` | Tested application image; JC OTA integration pending |
 | [P4-NANO](P4-NANO/) | `ESP32-P4-NANO` | Tested application image; Nano OTA integration pending |
+| [P4-OPT](P4-OPT/) | `ESP32-P4-OPT` | P4-NANO with Tubing Optimizer v5; installed through the on-controller updater |
+| [JC-OPT](JC-OPT/) | `JC-ESP32P4-OPT` | JC with Tubing Optimizer v5; installed through the on-controller updater |
+| [S31-OPT](S31-OPT/) | `ESP32-S31-OPT` | ESP32-S31-WROOM-3 core board with OPT 7.02; USB-tested, first web OTA pending |
 | [P4-LCD](P4-LCD/) | `Waveshare-P4-LCD-7B` | Development application image for the Waveshare 7-inch touch LCD; on-controller Firmware Update page |
 | [P4-TRMNL](P4-TRMNL/) | `TRMNL_XIAO_EPAPER` | Existing RIOT-Flow TRMNL release, moved without changing its binary |
 

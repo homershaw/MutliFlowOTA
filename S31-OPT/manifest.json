@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "product": "Riot-Flow",
+  "platform": "ESP32-S31-OPT",
+  "channel": "development",
+  "version": "20261103T014041Z",
+  "build": "20261103T014041Z 40896960+clean",
+  "firmware_url": "https://raw.githubusercontent.com/homershaw/MutliFlowOTA/main/S31-OPT/firmware.bin",
+  "sha256": "bb0e1a9062928f9d9cb5d64df18061be7dfa3d2da2ace19ea2ec83ccef644df0",
+  "size": 3079424,
+  "artifact_type": "application",
+  "build_environment": "s31 (ESP-IDF 6.1 + Arduino-ESP32 4.0.0-RC1)",
+  "source_repository": "https://github.com/homershaw/Riot",
+  "source_branch": "feature/s31-opt",
+  "source_commit": "40896960caec18dcb38e8b022c515ba01d8edeaa",
+  "tested_chip": "ESP32-S31",
+  "tested_chip_revision": "0.0",
+  "tested_flash_bytes": 16777216,
+  "validation": "Installed over USB (idf.py flash, application only) on an ESP32-S31-WROOM-3 core board (chip rev 0.0, COM16) with saved configuration retained; 28 web pages loaded without script errors. First over-the-air install through the on-controller Firmware Update page not yet done.",
+  "ota_validated": false,
+  "notes": "RIOT controller on the ESP32-S31-WROOM-3 core board with OPT 7.02 (two runs). Tag table, I/O forcing from the Tags page, Site Logo, MQTT, Logger, PID loops. Since bdec5c2: Find M31; MQTT Tag picker lists Tag-table Tags only, with live values, filter and select all/clear; Site Logo and Information Save no longer raises a leave-page warning; Dashboard shows the short version (full build on hover, full on Maintenance). Application-only image; preserves the installed bootloader and saved configuration. Install confirmation: INSTALL S31-OPT."
+}
