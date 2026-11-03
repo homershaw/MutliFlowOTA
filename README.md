@@ -13,8 +13,8 @@ both use ESP32-P4 but have different hardware mappings and build targets.
 
 | Directory | Manifest platform | Status |
 |---|---|---|
-| [JC-Riot](JC-Riot/) | `JC-ESP32P4-M3-DEV` | Tested application image; JC OTA integration pending |
-| [P4-NANO](P4-NANO/) | `ESP32-P4-NANO` | Tested application image; Nano OTA integration pending |
+| [JC-Riot](JC-Riot/) | `JC-ESP32P4-M3-DEV` | JC without optimizer; build-only, same source as JC-OPT |
+| [P4-NANO](P4-NANO/) | `ESP32-P4-NANO` | P4-NANO without optimizer; build-only, same source as P4-OPT |
 | [P4-OPT](P4-OPT/) | `ESP32-P4-OPT` | P4-NANO with Tubing Optimizer v5; installed through the on-controller updater |
 | [JC-OPT](JC-OPT/) | `JC-ESP32P4-OPT` | JC with Tubing Optimizer v5; installed through the on-controller updater |
 | [S31-OPT](S31-OPT/) | `ESP32-S31-OPT` | ESP32-S31-WROOM-3 core board with OPT 7.02; USB-tested, first web OTA pending |
