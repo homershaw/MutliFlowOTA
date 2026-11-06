@@ -5,7 +5,7 @@ Source: Riot repo, branch feature/trmnl-opt-demo (PlatformIO env trmnl_opt_demo)
 
 | File | Size | SHA-256 |
 |---|---|---|
-| Riot-Flow-OPT-DEMO3.bin | 1899424 | e88e45787ad312b1d2e50d59b6848f6a428a61e98623a75082e546c7c308dc1c |
+| Riot-Flow-OPT-DEMO4.bin | 1899424 | c8dea4b1f01d7e803cebf6669f89d7a7bcd1c56f2ceb34f86adf9068424e8ac7 |
 
 Install: controller web page /firmware-update -> Local Firmware Upload (type UPDATE).
 
