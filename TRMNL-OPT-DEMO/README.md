@@ -1,12 +1,13 @@
 # TRMNL ePaper - OPT plunger-lift sales demo
 
 Riot-Flow TRMNL / XIAO ePaper controller with the OPT 7.02 plunger-lift demo screens,
-battery readout and Find M31 remote I/O discovery.
+battery readout, Find M31 remote I/O discovery and the Nearby Bluetooth
+screen (demo, off by default; turn it on at /nearby).
 Source: Riot repo, branch feature/trmnl-opt-demo (PlatformIO env trmnl_opt_demo).
 
 | File | Size | SHA-256 |
 |---|---|---|
-| Riot-Flow-OPT-DEMO7.bin | 1921312 | 7f0133205a5fa445deb2beedb973f4583bd1f1f351e141ef874588e8c7430ffc |
+| Riot-Flow-OPT-DEMO8.bin | 2039360 | 05a3f659bb87ddb23e95195b17e865dc9ca4072056a02dc4772e1708c4e74969 |
 
 Install: controller web page /firmware-update -> Local Firmware Upload (type UPDATE).
 
